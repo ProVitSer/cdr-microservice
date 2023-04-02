@@ -19,7 +19,7 @@ export class Cdr {
   exten: string;
 
   @Prop({})
-  unicueid: string;
+  uniqueid: string;
 
   @Prop({})
   extensionNumber: string;
@@ -42,10 +42,10 @@ export class Cdr {
   })
   complete?: boolean;
 
-  @Prop()
+  @Prop({ type: Date, default: Date.now })
   stamp?: Date;
 
-  @Prop()
+  @Prop({ type: Date, default: Date.now })
   changed?: Date;
 }
 
